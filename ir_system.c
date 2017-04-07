@@ -4,6 +4,7 @@
 #include "type.h"
 #include "drivers.h"
 #include "stimulus_file.h"
+#include "isp_core.h"
 
 #ifdef _SIMULATION_
 char infilename[50]={0,};
@@ -83,10 +84,10 @@ void doCalcNucGain(void)
 
 void showImage(uint16 *image)
 {
-    uint8  rgb[IRWID*IRHGT*3];
-    uint16 contrast[IRWID*IRHGT];
+    uint8 rgb[IRWID*IRHGT*3];
+    uint8 contrast[IRWID*IRHGT];
 
-    normalize(image, contrast);
+    doContrast(image, contrast);
     paletteMapping(contrast, rgb);
 
     displayOut(rgb);

@@ -97,8 +97,15 @@ void do3DNR(uint16 *in, uint16 *out)
     printf("----do3DNR----.\n");
 }
 
+void doContrast(uint16 *in, uint8 *out)
+{
+    printf("----doContrast----.\n");
+    //normalize(in, out);
+    histEqualize(in, out);
+}
+
 #include "palette_gray.h"
-void paletteMapping(uint16 *in, uint8 *rgb)
+void paletteMapping(uint8 *in, uint8 *rgb)
 {
     int i;
 

@@ -4,7 +4,7 @@
 #include "settings.h"
 #include "isp_core.h"
 
-void normalize(uint16 *in, uint16 *out)
+void normalize(uint16 *in, uint8 *out)
 {
 	int i;
 

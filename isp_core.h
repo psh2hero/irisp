@@ -10,7 +10,8 @@ void doDPC(uint16 *in, uint16 *out);
 void do2DNR(uint16 *in, uint16 *out);
 void do3DNR(uint16 *in, uint16 *out);
 
-void paletteMapping(uint16 *in, uint8 *rgb);
+void doContrast(uint16 *image, uint8 *contrast);
+void paletteMapping(uint8 *in, uint8 *rgb);
 
 //2DNR//////////////////////////////////////////////////////////////////////
 void gaussianFilter16(uint16 *in, uint16 *out, float sigma, uint16 size);
@@ -21,7 +22,7 @@ void simpleDPC(uint16 *in, uint16 *out);
 void autoDPC(uint16 *in, uint16 *out);
 
 //Contrast//////////////////////////////////////////////////////////////////
-void normalize(uint16 *image, uint16 *contrast);
-void histEqualize(uint16 *image, uint16 *contrast);
+void normalize(uint16 *image, uint8 *contrast);
+void histEqualize(uint16 *image, uint8 *contrast);
 
 
